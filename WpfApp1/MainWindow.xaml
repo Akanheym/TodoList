@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="Список задач по обучению" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dgToDoList" FontSize="16" Margin="10" Loaded="dgToDoList_Loaded" AutoGenerateColumns="False" RowBackground="#DEF5E5" AlternatingRowBackground="#BCEAD5" Background="#9ED5C5">
+        <DataGrid x:Name="dgToDoList" FontSize="16" Margin="10" Loaded="dgToDoList_Loaded" AutoGenerateColumns="False" 
+                  RowBackground="#DEF5E5" AlternatingRowBackground="#BCEAD5" Background="#9ED5C5" 
+                  BorderBrush="#8EC3B0" Foreground="#153462" CanUserReorderColumns="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path = CreationData}" IsReadOnly="True" Header="Дата" Width="85"/>
                 <DataGridCheckBoxColumn Binding="{Binding Path = IsDone, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Header="Готово" Width="60"/>
-                <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" Header="Что нужно научиться делать\выучить" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" 
+                                    Header="Что нужно научиться делать\выучить" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
